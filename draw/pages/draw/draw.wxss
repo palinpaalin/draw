@@ -1,1 +1,9 @@
 /* pages/draw/draw.wxss */
+.rotateCtn{width: 100%;transform-style:preserve-3d;position:relative;}
+.frame{width: 40%;height: 360rpx;position: absolute;}
+.front{animation:front 1s linear 1;backface-visibility: hidden;}
+.back{animation:back 1s linear 1;}
+@keyframes front{from{transform: rotateY(0deg);}  to{transform: rotateY(180deg);}}
+@keyframes back{from{transform: rotateY(-180deg);}  to{transform: rotateY(0deg);}}
+.z1{z-index:6}
+.z2{z-index:5}

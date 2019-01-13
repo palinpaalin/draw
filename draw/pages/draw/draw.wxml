@@ -1,2 +1,11 @@
 <!--pages/draw/draw.wxml-->
-<text>pages/draw/draw.wxml</text>
+<view class='rotateCtn'>
+   <!--正面的框  -->
+   <view class='{{frameClass1}}'  data-id='1'  bindtap='rotateFn' style='background-color:yellow'>
+     正面
+   </view>
+   <!--背面的框  -->
+   <view class='{{frameClass2}}'  bindtap='rotateFn' style='background-color:red'>
+     反面
+   </view>
+</view>

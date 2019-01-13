@@ -5,7 +5,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    frameClass1: 'frame z1',//默认正面在上面
+    frameClass2: 'frame z2'
+  },
+  rotateFn: function (e) {
+    var that = this
+    if (this.data.frameClass1 == 'frame z1' &&
+      this.data.frameClass2 == 'frame z2') {
+      that.setData({
+        frameClass1: "frame front",
+        frameClass2: "frame back",
+      })
+      setTimeout(function () {
+        that.setData({
+          frameClass1: "frame z2",
+          frameClass2: "frame z1",
+        })
+      }, 1000);
+    }
+    else {
+      that.setData({
+        frameClass1: "frame back",
+        frameClass2: "frame front",
+      })
+      setTimeout(function () {
+        that.setData({
+          frameClass1: "frame z1",
+          frameClass2: "frame z2",
+        })
+      }, 1000);
+    }
   },
 
   /**
@@ -62,5 +91,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
 })
