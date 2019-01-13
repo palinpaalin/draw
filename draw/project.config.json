@@ -12,8 +12,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.2",
-	"appid": "wx768745b1975694d0",
-	"projectname": "draw",
+	"appid": "wx43585bb6bb885ac3",
+	"projectname": "ada_draw",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

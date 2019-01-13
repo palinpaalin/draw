@@ -2,12 +2,39 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/draw/draw"
+    "pages/draw/draw",
+    "pages/result/result"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+     {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/draw.png",
+        "selectedIconPath": "image/draw.png",
+        "text": "奖品"
+      },
+      {
+        "pagePath": "pages/draw/draw",
+        "iconPath": "image/draw.png",
+        "selectedIconPath": "image/draw.png",
+        "text": "抽奖"
+      },
+      {
+        "pagePath": "pages/result/result",
+        "iconPath": "image/draw.png",
+        "selectedIconPath": "image/draw.png",
+        "text": "奖品"
+      }
+    ]
   }
 }
