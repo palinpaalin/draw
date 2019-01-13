@@ -17,7 +17,7 @@
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [
-     {
+      {
         "pagePath": "pages/index/index",
         "iconPath": "image/draw.png",
         "selectedIconPath": "image/draw.png",
