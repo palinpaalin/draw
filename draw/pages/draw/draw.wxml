@@ -1,4 +1,5 @@
 <!--pages/draw/draw.wxml-->
+<view class='draw' style="background-image: url('../../image/magic.png')">
 <view class='rotateCtn'>
    <!--正面的框  -->
    <view class='{{frameClass1}}'  data-id='1'  bindtap='rotateFn' style='background-color:yellow'>
@@ -8,4 +9,5 @@
    <view class='{{frameClass2}}'  bindtap='rotateFn' style='background-color:red'>
      反面
    </view>
+</view>
 </view>
