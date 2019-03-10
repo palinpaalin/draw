@@ -8,6 +8,7 @@ Page({
     frameClass1: 'frame z1',//默认正面在上面
     frameClass2: 'frame z2'
   },
+
   rotateFn: function (e) {
     var that = this
     if (this.data.frameClass1 == 'frame z1' &&
@@ -37,11 +38,20 @@ Page({
     }
   },
 
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this
+    wx.getSystemInfo({
+      success: function(res) {
+        that.setData({
+          draw_height: (res.windowHeight - 200) / 2,
+          draw_width: (res.windowWidth - 200) / 2,
+        })
+      },
+    })
   },
 
   /**
