@@ -6,35 +6,19 @@ Page({
   data: {
     dataList: [
       {
-        goods_id: 1,
-        goods_title: '商品标题1',
-        goods_img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-        goods_xiaoliang: '0',
-        goods_price: '60'
+        prize_id: '一等奖',
+        total_num: 10,
+        prize_img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+        prize_xiaoliang: '未开奖',
+        prize_title: '兰博基尼五元代金券',
+        num_left:10
       }, {
-        goods_id: 1,
-        goods_title: '商品标题2',
-        goods_img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-        goods_xiaoliang: '0',
-        goods_price: '70'
-      }, {
-        goods_id: 1,
-        goods_title: '商品标题3',
-        goods_img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-        goods_xiaoliang: '0',
-        goods_price: '80'
-      }, {
-        goods_id: 1,
-        goods_title: '商品标题4',
-        goods_img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-        goods_xiaoliang: '0',
-        goods_price: '90'
-      }, {
-        goods_id: 1,
-        goods_title: '商品标题5',
-        goods_img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-        goods_xiaoliang: '0',
-        goods_price: '110'
+        prize_id: '一等奖',
+        total_num: 10,
+        prize_img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+        prize_xiaoliang: '未开奖',
+        prize_title: '二手捷达王五元代金券',
+        num_left: 10
       }
     ],
   }
