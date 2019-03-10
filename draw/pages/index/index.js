@@ -12,7 +12,7 @@ Page({
   // 跳转到新的页面 - 查看所有奖品
   jumpBtn: function(options) {
     wx.navigateTo({
-      url: '../prize/prize'
+      url: '../draw/draw'
     })
   },
 
