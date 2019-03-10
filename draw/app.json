@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/draw/draw",
-    "pages/result/result"
+    "pages/result/result",
+    "pages/prize/prize"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,16 +22,10 @@
         "pagePath": "pages/index/index",
         "iconPath": "image/draw.png",
         "selectedIconPath": "image/draw.png",
-        "text": "奖品"
-      },
-      {
-        "pagePath": "pages/draw/draw",
-        "iconPath": "image/draw.png",
-        "selectedIconPath": "image/draw.png",
         "text": "抽奖"
       },
       {
-        "pagePath": "pages/result/result",
+        "pagePath": "pages/prize/prize",
         "iconPath": "image/draw.png",
         "selectedIconPath": "image/draw.png",
         "text": "奖品"

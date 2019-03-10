@@ -8,6 +8,14 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+
+  // 跳转到新的页面 - 查看所有奖品
+  jumpBtn: function(options) {
+    wx.navigateTo({
+      url: '../prize/prize'
+    })
+  },
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
