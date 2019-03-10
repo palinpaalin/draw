@@ -16,6 +16,8 @@ Page({
         prize_xiaoliang: '未开奖',
         prize_title: '兰博基尼五元代金券',
         num_left:10,
+        nameList:["1","2","3"],
+        onwerShip:false
       }, 
       {
         prize_id: '二等奖',
@@ -24,10 +26,23 @@ Page({
         prize_xiaoliang: '未开奖',
         prize_title: '二手捷达王五元代金券',
         num_left: 10,
+        nameList:[],
+        onwerShip:false
+      },
+      {
+        prize_id: '三等奖',
+        total_num: 10,
+        prize_img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+        prize_xiaoliang: '未开奖',
+        prize_title: '二手捷达王五元代金券',
+        num_left: 10,
+        nameList: ["anna","john"],
+        onwerShip: false
       }
     ],
   },
   onLoad: function () {
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -53,6 +68,19 @@ Page({
           })
         }
       })
+    }
+    var i;
+    for (i = 0; i < this.data.dataList.length; i++) {
+      var item;
+      for (item = 0; item < this.data.dataList[i].nameList.length; item++) {
+        if ("1" == this.data.dataList[i].nameList[item]) {
+          console.log(this.data.dataList[i].nameList[item]);
+          var deletedTodo = "dataList[" + i + "].onwerShip";
+          this.setData({
+            [deletedTodo]: true
+          })
+        }
+      }
     }
   }
 
