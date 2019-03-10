@@ -7,3 +7,11 @@
 @keyframes back{from{transform: rotateY(-180deg);}  to{transform: rotateY(0deg);}}
 .z1{z-index:6}
 .z2{z-index:5}
+.treasure{
+  width:200px;
+  height:200px;
+}
+.coin{
+  width:200px;
+  height:200px;
+}

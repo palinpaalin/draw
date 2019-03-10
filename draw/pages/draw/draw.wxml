@@ -1,13 +1,15 @@
 <!--pages/draw/draw.wxml-->
-<view class='draw' style="background-image: url('../../image/magic.png')">
+<view class='draw'>
 <view class='rotateCtn'>
    <!--正面的框  -->
-   <view class='{{frameClass1}}'  data-id='1'  bindtap='rotateFn' style='background-color:yellow'>
-     正面
+   <view class='{{frameClass1}}'  data-id='1'  bindtap='rotateFn' style='width:200px; height:200px; top:{{draw_height}}px; left:{{draw_width}}px'>
+   <!-- 正面 -->
+    <image class='treasure' src='/image/treasurebox.jpg' mode='aspectFit'></image>
    </view>
    <!--背面的框  -->
-   <view class='{{frameClass2}}'  bindtap='rotateFn' style='background-color:red'>
-     反面
+   <view class='{{frameClass2}}' bindtap='rotateFn' style='width:200px; height:200px; top:{{draw_height}}px; left:{{draw_width}}px'>
+   <!-- 背面 -->
+   <image class='coin' src='/image/coin.jpg' mode='aspectFit'></image>
    </view>
 </view>
 </view>
