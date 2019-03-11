@@ -1,12 +1,15 @@
 // pages/draw/draw.js
 Page({
-
+ 
   /**
    * 页面的初始数据
    */
   data: {
     frameClass1: 'frame z1',//默认正面在上面
-    frameClass2: 'frame z2'
+    frameClass2: 'frame z2',
+    unopenedPic: '/image/treasurebox.jpg',
+    openedPic: '/image/coin.jpg',
+    reward: '奖品',
   },
 
   rotateFn: function (e) {
@@ -38,6 +41,17 @@ Page({
     }
   },
 
+  touch: function () {
+    let animation1 = wx.createAnimation({
+      delay: 0,
+      duration: 1000,
+      timingFunction: "ease"
+    });
+    animation1.translateY(-(this.data.bgHeight - this.data.drawHeight + 50)).step().translateY(-(this.data.bgHeight - this.data.drawHeight)).step()
+    this.setData({
+      animation1: animation1.export()
+    });
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -47,11 +61,17 @@ Page({
     wx.getSystemInfo({
       success: function(res) {
         that.setData({
-          draw_height: (res.windowHeight - 200) / 2,
-          draw_width: (res.windowWidth - 200) / 2,
+          bgHeight: res.windowHeight,
+          bgWidth: res.windowWidth,
+          drawHeight: (res.windowHeight - 200) / 4,
+          drawWidth: (res.windowWidth - 200) / 2,
+          rewardHeight: (res.windowHeight - 200) / 3,
+          rewardWidth: res.windowWidth / 2,
+          textHeight: (res.windowHeight - 200) / 3 + 250
         })
       },
     })
+    that.touch()
   },
 
   /**

@@ -1,15 +1,24 @@
 <!--pages/draw/draw.wxml-->
-<view class='draw'>
-<view class='rotateCtn'>
-   <!--正面的框  -->
-   <view class='{{frameClass1}}'  data-id='1'  bindtap='rotateFn' style='width:200px; height:200px; top:{{draw_height}}px; left:{{draw_width}}px'>
-   <!-- 正面 -->
-    <image class='treasure' src='/image/treasurebox.jpg' mode='aspectFit'></image>
-   </view>
-   <!--背面的框  -->
-   <view class='{{frameClass2}}' bindtap='rotateFn' style='width:200px; height:200px; top:{{draw_height}}px; left:{{draw_width}}px'>
-   <!-- 背面 -->
-   <image class='coin' src='/image/coin.jpg' mode='aspectFit'></image>
-   </view>
+<view class='draw' style="width:{{bgWidth}}px; height: {{bgHeight}}px; background-image: url('/image/draw_bg.jpeg'); background-size:100% 100%;">
+
+  <!-- 点击抽奖 -->
+  <view class='rotateCtn' animation="{{animation1}}">
+    <!--正面的框  -->
+    <view class='{{frameClass1}}'  data-id='1' bindtap='rotateFn'  style='width:200px; height:200px; top:{{bgHeight}}px; left:{{drawWidth}}px'>
+      <image class='unopened' src='{{unopenedPic}}' mode='aspectFit'></image>
+    </view>
+    <!--背面的框  -->
+    <view class='{{frameClass2}}' data-id='0' bindtap='rotateFn' animation="{{animation2}}" style='width:200px; height:200px; top:{{bgHeight}}px; left:{{drawWidth}}px'>
+      <image class='opened' src='{{openedPic}}' mode='aspectFit'></image>
+    </view>
+  </view>
+
+  <!-- 奖品文字 -->
+  <view class='rewardTextWrapper' style="margin-top:{{textHeight}}px">
+    <text>{{reward}}</text>
+  </view>
+
 </view>
-</view>
+
+
+
