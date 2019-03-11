@@ -26,8 +26,8 @@
       },
       {
         "pagePath": "pages/prize/prize",
-        "iconPath": "image/draw.png",
-        "selectedIconPath": "image/draw.png",
+        "iconPath": "image/prize.png",
+        "selectedIconPath": "image/prize.png",
         "text": "奖品"
       }
     ]
