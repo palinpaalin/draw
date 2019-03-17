@@ -1,6 +1,5 @@
 /* pages/drawv2.wxss */
 .wordLayout{
-  height: 300rpx;
   display: flex;
   flex-direction: row
 }

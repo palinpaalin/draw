@@ -6,14 +6,14 @@ Page({
    */
   data: {
     word1: '天',
-    word2: '天',
-    word3: '天',
+    word2: '丑',
+    word3: '兔',
     wordList1: ['天','地','玄','黄'],
     wordList2: ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'],
     wordList3: ['鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴', '鸡', '狗', '猪'],
     interval1: 1,
     interval2: 2,
-    interval3: 3
+    interval3: 3,
   },
 
   changeWord1: function() {
@@ -43,6 +43,18 @@ Page({
     clearInterval(this.data.interval3)
   },
 
+  animateEntry: function () {
+    let animationEntry = wx.createAnimation({
+      delay: 0,
+      duration: 3000,
+      timingFunction: "ease"
+    });
+    animationEntry.scale(1).step()
+    this.setData({
+      animationEntry: animationEntry.export()
+    });
+  },
+
   /**
    * Lifecycle function--Called when page load
    */
@@ -51,13 +63,14 @@ Page({
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
-          bgHeight: res.windowHeight,
-          bgWidth: res.windowWidth,
+          height: res.windowHeight,
+          wdith: res.windowWidth,
+          bgHeight: ((res.windowHeight - 200) / 3),
+          bgWidth: ((res.windowWidth - 210) / 2 - 20),
           drawHeight: (res.windowHeight - 200) / 4,
           drawWidth: (res.windowWidth - 210) / 2,
-          rewardHeight: (res.windowHeight - 200) / 3,
-          rewardWidth: res.windowWidth / 2,
-          textHeight: (res.windowHeight - 200) / 3 + 250,
+          bgTestH: res.windowHeight / 4, 
+          bgTestW: res.windowWidth / 2,
           hasDrawn: false
         })
       },
@@ -68,6 +81,7 @@ Page({
       interval3: setInterval(this.changeWord3, 80)
     })
     setInterval(this.setPrize, 2000)
+    this.animateEntry()
   },
 
   /**
