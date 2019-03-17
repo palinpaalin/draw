@@ -1,0 +1,13 @@
+/* pages/drawv2.wxss */
+.wordLayout{
+  height: 300rpx;
+  display: flex;
+  flex-direction: row
+}
+
+.word{
+  font-family: 'iconfont';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 70px;
+}

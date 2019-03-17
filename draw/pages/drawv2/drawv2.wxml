@@ -1,0 +1,22 @@
+<!--pages/drawv2.wxml-->
+<view class='drawv2'>
+
+  <view class='wordLayout' style='margin-left:{{drawWidth}}px; margin-top:{{drawHeight}}px'>
+    <view class='word'>
+      <text>{{word1}}</text>
+    </view>
+    <view  class='word'>
+      <text>{{word2}}</text>
+    </view>
+    <view class='word'>
+      <text>{{word3}}</text>
+    </view>
+
+  </view>
+
+  <!-- 奖品文字 -->
+  <view class='rewardTextWrapper' style="margin-top:{{textHeight}}px">
+    <text >{{reward}}</text>
+  </view>
+</view>
+
