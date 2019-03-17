@@ -1,5 +1,5 @@
 <!--pages/draw/draw.wxml-->
-<view class='draw' style="width:{{bgWidth}}px; height: {{bgHeight}}px; background-image: url('/image/draw_bg.jpeg'); background-size:100% 100%;">
+<view class='draw' style="width:{{bgWidth}}px; height: {{bgHeight}}px; background-image: url('/image/background.png'); background-size:100% 100%;">
 
   <!-- 点击抽奖 -->
   <view class='rotateCtn' animation="{{animation1}}">
