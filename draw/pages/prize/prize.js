@@ -10,38 +10,7 @@ Page({
     hasUserInfo:false,
     showDialog: false,
     nameList:[],
-    dataList: [
-      {
-        prize_id: '一等奖',
-        total_num: 10,
-        prize_img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554045111&di=47a6071abbdf0de03fac72c9387fe409&imgtype=jpg&er=1&src=http%3A%2F%2Fpic64.nipic.com%2Ffile%2F20150203%2F8785995_110144065000_2.jpg',
-        prize_status: '未开奖',
-        prize_title: '兰博基尼五元代金券',
-        num_left:10,
-        nameList:[{name:"1"},{name:"2"},{name:"3"}],
-        onwerShip:false
-      }, 
-      {
-        prize_id: '二等奖',
-        total_num: 10,
-        prize_img: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-        prize_status: '未开奖',
-        prize_title: '二手捷达王五元代金券',
-        num_left: 10,
-        nameList:[],
-        onwerShip:false
-      },
-      {
-        prize_id: '三等奖',
-        total_num: 10,
-        prize_img: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2296517017,2943842369&fm=26&gp=0.jpg',
-        prize_status: '未开奖',
-        prize_title: '二手捷达王五元代金券',
-        num_left: 10,
-        nameList: [{name:"Anna"}, {name:"John"}],
-        onwerShip: false
-      }
-    ],
+    dataList: []
   },
   onLoad: function () {
 
@@ -72,6 +41,17 @@ Page({
         }
       })
     }
+    var that = this
+    console.log(this.data.userInfo.nickName)
+    wx.cloud.init();
+    const db = wx.cloud.database()
+    db.collection('test').get({
+      success(res) {
+        that.setData({
+          dataList: res.data
+        })
+      }
+    })
     var i;
     for (i = 0; i < this.data.dataList.length; i++) {
       var item;
@@ -85,6 +65,7 @@ Page({
         }
       }
     }
+    
   },
   onClickdiaView: function () {
     
