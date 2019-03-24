@@ -1,7 +1,39 @@
 /* pages/drawv2.wxss */
+.drawv2{
+  align-items: center;
+}
+
+.bgImage{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.main{
+  position: absolute;
+  z-index: 3;
+  align-items: center;
+}
+
+.wordBorder{
+  position: absolute;
+  z-index: 4;
+  height:100px; 
+  width: 250px;
+  align-items: center;
+}
+
 .wordLayout{
+  top: 5px;
+  left: 20px;
+  position: absolute;
   display: flex;
-  flex-direction: row
+  flex-direction: row;
+  align-items: center;
+  z-index: 999;
 }
 
 .word{
@@ -12,24 +44,32 @@
 }
 
 .btn1 {
-  width: 80%;
-  margin-top: 20rpx;
-  background-color: rgba(255, 0, 0, 0);
-  color: white;
-  border-radius: 98rpx;
+  width: 180px;
+  height: 150px;
+  top: 250px;
+  background-color: transparent;
+  color: transparent;
+  border-radius: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .btnImg {
-  margin-right: 8rpx;
-  width: 46rpx;
-  height: 46rpx;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
 }
 
 .btn1::after {
-  border-radius: 98rpx;
+  background-color: transparent;
+  color: transparent;
+  border-radius: 98px;
   border: 0; 
 }
+
+
+
+

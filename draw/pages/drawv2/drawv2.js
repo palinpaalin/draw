@@ -74,12 +74,10 @@ Page({
         that.setData({
           height: res.windowHeight,
           wdith: res.windowWidth,
-          bgHeight: ((res.windowHeight - 200) / 3),
-          bgWidth: ((res.windowWidth - 210) / 2 - 20),
-          drawHeight: (res.windowHeight - 200) / 4,
+          borderHeight: ((res.windowHeight - 200) / 3),
+          borderWidth: ((res.windowWidth - 250) / 2),
+          drawHeight: (res.windowHeight - 200) / 4 + 30,
           drawWidth: (res.windowWidth - 210) / 2,
-          bgTestH: res.windowHeight / 4, 
-          bgTestW: res.windowWidth / 2,
           hasDrawn: false
         })
       },
@@ -90,7 +88,6 @@ Page({
       interval3: setInterval(this.changeWord3, 80)
     })
     setInterval(this.setPrize, 4000)
-    
     this.animateEntry()
   },
 

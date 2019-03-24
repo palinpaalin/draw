@@ -1,35 +1,26 @@
 <!--pages/drawv2.wxml-->
-<view class='drawv2' style="margin-top: 0px; width:{{width}}px; height:{{height}}px; background-image: url('/image/draw_bg.jpeg'); background-size:100% 100%;">
+<view class='drawv2'>
+  <image class="bgImage" src="/image/background.png" mode="scaleToFill"></image>
 
-  <view style="height:{{bgHeight}}px"></view>
-  <view class='bgLayout' animation="{{animationEntry}}" style="margin-right: {{bgWidth}}px; margin-left:{{bgWidth}}px; background-size:100% 100%;">
-    <view class='wordLayout' style="margin-left: 20px; margin-right: 20px">
-      <view class='word'>
-        <text>{{word1}}</text>
-      </view>
-      <view  class='word'>
-        <text>{{word2}}</text>
-      </view>
-      <view class='word'>
-        <text>{{word3}}</text>
-      </view>
-    </view>
-
-  <!-- <button class='btn1' open-type='jumpToMyPage'> -->
-
-    <button class='btn1' type="default" bindtap="jumpToMyPage">
-        <image class="dLogo"
-    src="/image/opened.png"> </image>
-        <view>
+  <view class='main' animation="{{animationEntry}}" style="left:{{borderWidth}}px; top:{{drawHeight}}px">
+    <image class="wordBorder" src="/image/border.png" mode="scaleToFill">
+      <view class='wordLayout' >
+        <view class='word'>
+          <text class>{{word1}}</text>
         </view>
-    </button>
-
-
+        <view  class='word'>
+          <text>{{word2}}</text>
+        </view>
+        <view class='word'>
+          <text>{{word3}}</text>
+        </view>
+      </view>
+    </image>
   </view>
 
-  <!-- 奖品文字 -->
-  <view class='rewardTextWrapper' style="margin-top:{{textHeight}}px">
-    <text >{{reward}}</text>
-  </view>
+  <button class='btn1' bindtap="jumpToMyPage">
+    <image class="btnImg" src="/image/opened.png" mode="scaleToFill"></image>
+  </button>
+
 </view>
 
