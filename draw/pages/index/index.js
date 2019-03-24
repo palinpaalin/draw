@@ -26,11 +26,11 @@ Page({
         console.log(that.data.userInfo.nickName)
         if (res.data[0].nickName == that.data.userInfo.nickName) {
           wx.navigateTo({
-            url: '../drawv2/drawv2'
+            url: '../draw/draw'
           })
         } else {
           wx.navigateTo({
-            url: '../draw/draw'
+            url: '../drawv2/drawv2'
           })
         }
       }
