@@ -76,11 +76,11 @@ Page({
       },
     })
     this.setData({
-      interval1: setInterval(this.changeWord1, 50),
-      interval2: setInterval(this.changeWord2, 75),
+      interval1: setInterval(this.changeWord1, 130),
+      interval2: setInterval(this.changeWord2, 120),
       interval3: setInterval(this.changeWord3, 80)
     })
-    setInterval(this.setPrize, 2000)
+    setInterval(this.setPrize, 4000)
     this.animateEntry()
   },
 
