@@ -10,3 +10,26 @@
   font-style: normal;
   font-size: 70px;
 }
+
+.btn1 {
+  width: 80%;
+  margin-top: 20rpx;
+  background-color: rgba(255, 0, 0, 0);
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnImg {
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.btn1::after {
+  border-radius: 98rpx;
+  border: 0; 
+}
