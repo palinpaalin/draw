@@ -6,14 +6,38 @@ Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    admin: []
   },
 
   // 跳转到新的页面 - 查看所有奖品
   jumpBtn: function(options) {
-    wx.navigateTo({
-      url: '../drawv2/drawv2'
+    var that = this
+    console.log(this.data.userInfo.nickName)
+    wx.cloud.init();
+    const db = wx.cloud.database()
+    db.collection('adminUserAccount').get({
+      success(res) {
+        // res.data 是一个包含集合中有权限访问的所有记录的数据，不超过 20 条
+        
+        that.setData({
+          admin: res.data
+        })
+        console.log(that.data.userInfo.nickName)
+        if (res.data[0].nickName == that.data.userInfo.nickName) {
+          wx.navigateTo({
+            url: '../drawv2/drawv2'
+          })
+        } else {
+          wx.navigateTo({
+            url: '../draw/draw'
+          })
+        }
+      }
     })
+    
+    
+    
   },
 
   //事件处理函数
@@ -57,6 +81,7 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+   
   },
   draw: function () {
     wx.navigateTo({
