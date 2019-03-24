@@ -9,7 +9,7 @@
   left:0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: -1;
 }
 
 .main{
@@ -27,7 +27,7 @@
 }
 
 .wordLayout{
-  top: 15px;
+  top: 5px;
   left: 20px;
   position: absolute;
   display: flex;
@@ -43,6 +43,29 @@
   font-size: 70px;
 }
 
+.btn1 {
+  width: 80%;
+  top: 200px;
+  background-color: rgba(255, 0, 0, 0);
+  color: white;
+  border-radius: 210px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.btnImg {
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.btn1::after {
+  border-radius: 98rpx;
+  border: 0; 
+}
 
 
 

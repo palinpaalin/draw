@@ -3,7 +3,7 @@
   <image class="bgImage" src="/image/background.png" mode="scaleToFill"></image>
 
   <view class='main' animation="{{animationEntry}}" style="left:{{borderWidth}}px; top:{{drawHeight}}px">
-    <image class="wordBorder" src="/image/border.jpg" mode="scaleToFill">
+    <image class="wordBorder" src="/image/border.png" mode="scaleToFill">
       <view class='wordLayout' >
         <view class='word'>
           <text class>{{word1}}</text>
@@ -17,6 +17,11 @@
       </view>
     </image>
   </view>
+
+  <button class='btn1' type="default" bindtap="jumpToMyPage" style="top: ">
+    <image class="dLogo"
+    src="/image/opened.png"></image>
+    </button>
 
 </view>
 

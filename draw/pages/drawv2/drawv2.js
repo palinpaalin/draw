@@ -16,6 +16,15 @@ Page({
     interval3: 3,
   },
 
+  //跳到另一个页面的事件处理函数
+  jumpToMyPage: function () {
+    if (true) {
+      wx.switchTab({
+        url: '../prize/prize',
+      })
+    }
+  },
+
   changeWord1: function() {
     let num = Math.floor(Math.random() * Math.floor(3))
     this.setData({
