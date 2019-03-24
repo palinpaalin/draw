@@ -18,10 +18,9 @@
     </image>
   </view>
 
-  <button class='btn1' type="default" bindtap="jumpToMyPage" style="top: ">
-    <image class="dLogo"
-    src="/image/opened.png"></image>
-    </button>
+  <button class='btn1' bindtap="jumpToMyPage">
+    <image class="btnImg" src="/image/opened.png" mode="scaleToFill"></image>
+  </button>
 
 </view>
 

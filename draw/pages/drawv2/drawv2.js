@@ -76,7 +76,7 @@ Page({
           wdith: res.windowWidth,
           borderHeight: ((res.windowHeight - 200) / 3),
           borderWidth: ((res.windowWidth - 250) / 2),
-          drawHeight: (res.windowHeight - 200) / 4,
+          drawHeight: (res.windowHeight - 200) / 4 + 30,
           drawWidth: (res.windowWidth - 210) / 2,
           hasDrawn: false
         })

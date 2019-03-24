@@ -44,11 +44,12 @@
 }
 
 .btn1 {
-  width: 80%;
-  top: 200px;
-  background-color: rgba(255, 0, 0, 0);
-  color: white;
-  border-radius: 210px;
+  width: 180px;
+  height: 150px;
+  top: 250px;
+  background-color: transparent;
+  color: transparent;
+  border-radius: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -57,13 +58,15 @@
 }
 
 .btnImg {
-  margin-right: 8rpx;
-  width: 46rpx;
-  height: 46rpx;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
 }
 
 .btn1::after {
-  border-radius: 98rpx;
+  background-color: transparent;
+  color: transparent;
+  border-radius: 98px;
   border: 0; 
 }
 
