@@ -14,10 +14,14 @@
         <text>{{word3}}</text>
       </view>
     </view>
-    <button class='btn1' open-type='openSetting'>
+
+  <!-- <button class='btn1' open-type='jumpToMyPage'> -->
+
+    <button class='btn1' type="default" bindtap="jumpToMyPage">
         <image class="dLogo"
-    src="/image/icon_gift_fill.png" bindtap='jumpBtn'> </image>
-        <view>查看奖品</view>
+    src="/image/opened.png"> </image>
+        <view>
+        </view>
     </button>
 
 
