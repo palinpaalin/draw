@@ -9,6 +9,6 @@
   </view>
   <view class="drawLogo">
     <image class="dLogo"
-    src="/image/draw.png" bindtap='jumpBtn'> </image>
+    src="/image/icon_gift_fill.png" bindtap='jumpBtn'> </image>
   </view>
 </view>

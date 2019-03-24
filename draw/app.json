@@ -14,20 +14,20 @@
   },
   "tabBar": {
     "color": "#7A7E83",
-    "selectedColor": "#3cc51f",
+    "selectedColor": "#FF2727",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "image/draw.png",
-        "selectedIconPath": "image/draw.png",
+        "iconPath": "image/index.png",
+        "selectedIconPath": "image/index1.png",
         "text": "抽奖"
       },
       {
         "pagePath": "pages/prize/prize",
-        "iconPath": "image/prize.png",
-        "selectedIconPath": "image/prize.png",
+        "iconPath": "image/icon_medal.png",
+        "selectedIconPath": "image/icon_medal1.png",
         "text": "奖品"
       }
     ]
