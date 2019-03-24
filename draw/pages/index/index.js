@@ -2,42 +2,48 @@
 //获取应用实例
 const app = getApp()
 
+
 Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    admin: []
+    admin: [],
+    flag: 0
   },
 
   // 跳转到新的页面 - 查看所有奖品
   jumpBtn: function(options) {
-    var that = this
-    console.log(this.data.userInfo.nickName)
-    wx.cloud.init();
-    const db = wx.cloud.database()
-    db.collection('adminUserAccount').get({
-      success(res) {
-        // res.data 是一个包含集合中有权限访问的所有记录的数据，不超过 20 条
-        
-        that.setData({
-          admin: res.data
-        })
-        console.log(that.data.userInfo.nickName)
-        if (res.data[0].nickName == that.data.userInfo.nickName) {
-          wx.navigateTo({
-            url: '../draw/draw'
+    if (this.data.flag == 0) {
+      this.data.flag = 1
+      var that = this
+      console.log(this.data.userInfo.nickName)
+      wx.cloud.init();
+      const db = wx.cloud.database()
+      db.collection('adminUserAccount').get({
+        success(res) {
+          // res.data 是一个包含集合中有权限访问的所有记录的数据，不超过 20 条
+
+          that.setData({
+            admin: res.data
           })
-        } else {
-          wx.navigateTo({
-            url: '../drawv2/drawv2'
-          })
+          console.log(that.data.userInfo.nickName)
+          if (res.data[0].nickName == that.data.userInfo.nickName) {
+            wx.navigateTo({
+              url: '../draw/draw'
+            })
+          } else {
+            wx.navigateTo({
+              url: '../drawv2/drawv2'
+            })
+          }
         }
-      }
-    })
-    
-    
-    
+      })
+    } else {
+      wx.switchTab({
+        url: '../prize/prize',
+      })
+    }
   },
 
   //事件处理函数
@@ -50,7 +56,8 @@ Page({
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
-        hasUserInfo: true
+        hasUserInfo: true,
+        flag: 0
       })
     } else if (this.data.canIUse){
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
