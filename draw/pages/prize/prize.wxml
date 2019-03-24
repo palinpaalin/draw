@@ -8,7 +8,7 @@
         </view>
         <view class='info' bindtap="onClickButton" data-index="{{index}}">
           <view class='title'>
-          {{item.prize_id}}: {{item.total_num}} 获得者: {{userInfo.nickName}}</view>
+          {{item.prize_id}}: 共{{item.total_num}}名 </view>
           <view class='price'>{{item.prize_title}}</view>
           <view class='num' wx:if="{{item.nameList.length == 0}}">开奖状态：{{item.prize_status}}</view>
           <view class='num' wx:elif="{{item.onwerShip}}">开奖状态：已中奖</view>
